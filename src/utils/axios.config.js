@@ -6,7 +6,7 @@ switch (process.env.REACT_APP_ENVIRONMET) {
     URL = "http://localhost:5000/";
     break;
   case "PRODUCTION":
-    URL = "http://productionserver.com/";
+    URL = "https://moon-tech-serverss.vercel.app/";
     break;
   default:
     URL = "http://localhost:5000/";

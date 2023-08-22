@@ -13,6 +13,7 @@ const AdminCustomersList = () => {
           <tr>
             <th className="px-4 py-2">ID</th>
             <th className="px-4 py-2">Name</th>
+            <th className="px-4 py-2">Email</th>
             <th className="px-4 py-2">Actions</th>
           </tr>
         </thead>
@@ -21,6 +22,7 @@ const AdminCustomersList = () => {
             <tr key={customer.id}>
               <td className="border px-4 py-2 text-center">{customer.id}</td>
               <td className="border px-4 py-2 text-center">{customer.name}</td>
+              <td className="border px-4 py-2 text-center">{customer.email}</td>
               <td className="border px-4 py-2 text-center text-green-600 ">
                 <Link to={`/admin/customers/${customer.id}`}>
                   Customer Detail View

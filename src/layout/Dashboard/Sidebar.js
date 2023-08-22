@@ -15,6 +15,12 @@ const Sidebar = () => {
         <li>
           <Link to="/dashboard/admin-customer"> Admin Customers </Link>
         </li>
+        <li>
+          <Link to="/dashboard/add-customerr"> Add Customers </Link>
+        </li>
+        <li>
+          <Link to="/dashboard/adminorderlist"> Admin Order List </Link>
+        </li>
         <li className="mt-auto">
           <Link to="/"> Back to Home </Link>
         </li>

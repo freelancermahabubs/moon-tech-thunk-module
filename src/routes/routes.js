@@ -11,6 +11,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import AdminCustomersList from "../pages/Dashboard/AdminCustomersList";
+import AddCustomer from "../pages/Dashboard/AddCustomer";
+import AdminOrderList from "../pages/Dashboard/AdminOrderList";
 
 const routes = createBrowserRouter([
   {
@@ -60,8 +62,16 @@ const routes = createBrowserRouter([
         element: <AddProduct />,
       },
       {
-        path:"admin-customer",
+        path: "admin-customer",
         element: <AdminCustomersList />,
+      },
+      {
+        path: "add-customerr",
+        element: <AddCustomer />,
+      },
+      {
+        path: "adminorderlist",
+        element: <AdminOrderList />,
       },
     ],
   },

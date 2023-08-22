@@ -6,8 +6,9 @@ import {useSelector} from "react-redux";
 import {Transition} from "@headlessui/react";
 
 const Navbar = () => {
-  // const cart = useSelector((state) => state.product);
+  const cart = useSelector((state) => state?.cart?.cart);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -61,9 +62,13 @@ const Navbar = () => {
           </Link>
           <Link to="/cart">
             <li title="cart" className="bg-indigo-500 p-2 rounded-full">
-              <span className="text-white  rounded-full bg-red-600 px-1 absolute top-2 font-semibold">
-                {/* {cart?.length} */}
-              </span>
+              {cart.length ? (
+                <span className="text-white  rounded-full bg-red-600 px-1 absolute top-[1%] font-semibold">
+                  {cart?.length}
+                </span>
+              ) : (
+                ""
+              )}
               <BsFillCartFill className="text-white " />
             </li>
           </Link>
@@ -103,13 +108,13 @@ const Navbar = () => {
             </Link>
             <Link to="/cart">
               <li title="cart" className="bg-indigo-500 p-2 w-8 rounded-full">
-                {/* {cart.length ? (
+                {cart.length ? (
                   <span className="text-white  rounded-full bg-red-600 px-1 absolute top-[8%] font-semibold">
                     {cart?.length}
                   </span>
                 ) : (
                   ""
-                )} */}
+                )}
                 <BsFillCartFill className="text-white " />
               </li>
             </Link>
