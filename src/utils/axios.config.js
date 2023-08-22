@@ -3,13 +3,13 @@ let URL;
 
 switch (process.env.REACT_APP_ENVIRONMET) {
   case "DEVELOPMENT":
-    URL = "http://localhost:5000/";
+    URL = "https://moon-tech-serverss.vercel.app/";
     break;
   case "PRODUCTION":
     URL = "https://moon-tech-serverss.vercel.app/";
     break;
   default:
-    URL = "http://localhost:5000/";
+    URL = "https://moon-tech-serverss.vercel.app/";
 }
 const instance = axios.create({
   baseURL: URL,
