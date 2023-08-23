@@ -13,10 +13,12 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import AdminCustomersList from "../pages/Dashboard/AdminCustomersList";
 import AddCustomer from "../pages/Dashboard/AddCustomer";
 import AdminOrderList from "../pages/Dashboard/AdminOrderList";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const routes = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage />,
     element: <Main />,
     children: [
       {
