@@ -1,23 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect,} from "react";
 
-import axios from "axios";
+
+import { useDispatch, useSelector } from "react-redux";
+import { getProcuts } from "../../features/products/productsSlice";
 
 const ProductList = () => {
-  const [products, setProcuts] = useState([]);
+  const dispatch = useDispatch();
+  const {products,} = useSelector((state) => state.products);
 
-  // const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/products")
-      .then((response) => {
-        setProcuts(response?.data?.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-  console.log(products);
+    dispatch(getProcuts());
+  }, [dispatch]);
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full ">
